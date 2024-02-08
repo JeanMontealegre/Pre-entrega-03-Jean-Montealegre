@@ -1,0 +1,19 @@
+@import "../utilidades/listas";
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+
+/*juguetes*/
+.img_juguetes{
+    @include flex;
+    @include dimensiones (80vw, 30vh);
+    background-image: url(../img/Portada\ juguetes.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    margin:0 auto ;
+    background-color: $bg_portadas;
+    background-blend-mode: soft-light;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: nth($paleta_colores , 7);
+}

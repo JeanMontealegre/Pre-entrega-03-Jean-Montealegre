@@ -1,0 +1,150 @@
+@import "../utilidades/listas";
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+
+/*body*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+h1{
+    color: nth($paleta_colores , 8);
+    background-clip: text;
+    text-align: center;
+    font-size: 60px;
+    font-family:'titan_one';
+    margin: 10px;
+}
+h2{
+    width: 80vw;
+}
+.lineas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: $gap_1;
+    margin-bottom: $gap_2;
+    width: 80vw;
+    margin: 0 auto;
+}
+.linea1{
+    background-color: nth($paleta_colores , 1);
+}
+.linea2{
+    background-color: nth($paleta_colores , 4);
+}
+.linea3{
+    background-color: nth($paleta_colores , 2);
+}
+.linea4{
+    background-color: nth($paleta_colores , 5);
+}
+.linea5{
+    background-color: nth($paleta_colores , 3);
+}
+/*boton whatsapp*/
+.whatsapp{
+    display: flex;
+    position: fixed;
+    @include dimensiones(100px, 100px);
+    bottom: 10vh;
+    right: 4vw;
+    text-align: center;
+    justify-content: center;
+    z-index: 999;
+    /*animacion boton whatsapp*/
+    animation: latido infinite 5s 3s;
+}
+@keyframes latido{
+    0%{
+        transform: scale(1);
+    }
+    10%{
+        transform: scale(1.1);
+    }
+    20%{
+        transform: scale(1);
+    }
+    30%{
+        transform: scale(1.1);
+    }
+    40%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    60%{
+        transform: scale(1);
+    }
+    70%{
+        transform: scale(1.1);
+    }
+    80%{
+        transform: scale(1);
+    }
+    90%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.whatsapp:hover::after {
+    content: "Hola, ¿Te puedo ayudar?";
+    position: absolute;
+    top: -30px;
+    left: -100px;
+    background-color:nth($paleta_colores , 1);
+    color: nth($paleta_colores , 6);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0.8;
+    width: 200px;
+    text-align: center;
+}
+/*productos*/
+.productos{
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    h2{
+        grid-column: span 2;
+        margin-top: $gap_1;
+        margin-left: 20vw;
+        font-size: 40px;
+        color: nth($paleta_colores , 1);
+        font-weight: bolder;
+    }
+}
+.galeria_productos{
+    width: 80vw;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+.fotos_productos{
+    margin: 20px 20px;
+    box-shadow: 0 0 5px $sombra_index;
+    justify-self: center;
+    img{
+        @include dimensiones (200px, 200px);
+        margin: 0.5rem;
+    }
+}
+.pie_foto_productos{
+    margin-bottom: 0.5rem;
+    p{
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 0.3rem;
+        color: $tx_productos;
+        font-weight: bold;
+    }
+}
+.pie_foto_productos .nombre_producto{
+    font-size: 18px;
+    color: nth($paleta_colores , 1);
+}

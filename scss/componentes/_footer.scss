@@ -1,0 +1,16 @@
+@import "../utilidades/listas";
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+
+/*footer*/
+footer{
+    color: nth($paleta_colores, 6);
+    background-color: nth($paleta_colores, 1);
+    @include flex;
+    font-weight: bold;
+    height: 70px;
+    margin-top: auto;
+}
+.texto_footer{
+    margin-right: $gap_2;
+}

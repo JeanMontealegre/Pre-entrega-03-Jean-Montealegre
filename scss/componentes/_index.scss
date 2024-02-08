@@ -1,0 +1,91 @@
+@import "../utilidades/listas";
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+
+/*index*/
+.lineas_portada{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: $gap_1;
+    margin-top: 0;
+    margin-bottom: $gap_2;
+}
+.texto_portada h1{
+    color: nth($paleta_colores , 1);
+}
+.galeria_categorias{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 80vw;
+    margin: $gap_2 auto;
+    margin-top: 3rem;
+    a{
+        text-decoration: none;
+    }
+}
+.galeria_index{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 80% 20%;
+    padding-top: $gap_1;
+    box-shadow: 0 0 5px $sombra_index;
+    margin: 0 $gap_1;
+    img{
+        @include dimensiones(200px, 200px)
+    }
+}
+.botones_index{
+    border: 0;
+    border-radius: 8px;
+    color:nth($paleta_colores , 1);
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+    span{
+        background-color: nth($paleta_colores , 6);
+        padding: 5px 40px;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+}
+/*seccion quienes somos*/
+.quienes_somos{
+    @include flex;
+    background-color: nth($paleta_colores , 5);
+    @include dimensiones(80vw, 250px);
+    gap: 10px;
+    margin: 4rem auto;
+}
+.img_quienes_somos{
+    height: 250px;
+}
+.cuadro_texto_quienes_somos{
+    width: 400px;
+    border-radius: $gap_2;
+    padding: 20px;
+    text-align: justify;
+    h2{
+        display: flex;
+        justify-content: left;
+        margin-bottom: 15px;
+        color: nth($paleta_colores , 6);
+    }
+}
+.conocer_mas{
+    display: flex;
+    margin-top: 5px;
+    justify-content: right;
+    background-color: nth($paleta_colores , 1);
+    color: nth($paleta_colores , 6);
+    border-radius: $gap_1;
+    padding: 10px;
+    margin-left: 240px;
+    text-decoration: none;
+}
+.conocer_mas:hover{
+    background-color: nth($paleta_colores , 6);
+    color: nth($paleta_colores , 1);
+}

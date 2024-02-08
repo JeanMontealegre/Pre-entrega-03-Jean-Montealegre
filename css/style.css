@@ -1,0 +1,625 @@
+@charset "UTF-8";
+/*comentario en sass y css*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "Chewy";
+  src: url(/fuentes/Chewy-Regular.ttf);
+  font-weight: bold;
+  font-style: bold;
+}
+@font-face {
+  font-family: "titan_one";
+  src: url(/fuentes/TitanOne-Regular.ttf);
+}
+html {
+  height: 100%;
+}
+
+/*header*/
+header {
+  background-color: #30618c;
+  position: sticky;
+  top: 0%;
+  z-index: 1;
+}
+
+.caja_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: auto;
+  height: 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav li ul li {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+nav ul {
+  display: flex;
+  font-size: 14px;
+  list-style: none;
+  gap: 3em;
+}
+
+nav ul li:hover > ul {
+  background-color: #30618c;
+}
+
+.navbar-collapse {
+  background-color: #30618c;
+  padding: 1rem;
+}
+
+.correo_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  color: #ffffff;
+  letter-spacing: 0.15rem;
+}
+
+.rrss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.rrss a img {
+  width: 25px;
+  height: 25px;
+}
+
+/*footer*/
+footer {
+  color: #ffffff;
+  background-color: #30618c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  height: 70px;
+  margin-top: auto;
+}
+
+.texto_footer {
+  margin-right: 2rem;
+}
+
+/*body*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+h1 {
+  color: whitesmoke;
+  background-clip: text;
+  text-align: center;
+  font-size: 60px;
+  font-family: "titan_one";
+  margin: 10px;
+}
+
+h2 {
+  width: 80vw;
+}
+
+.lineas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  height: 1rem;
+  margin-bottom: 2rem;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.linea1 {
+  background-color: #30618c;
+}
+
+.linea2 {
+  background-color: #f2b279;
+}
+
+.linea3 {
+  background-color: #59a8d9;
+}
+
+.linea4 {
+  background-color: #f28f6b;
+}
+
+.linea5 {
+  background-color: #62b7d9;
+}
+
+/*boton whatsapp*/
+.whatsapp {
+  display: flex;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 10vh;
+  right: 4vw;
+  text-align: center;
+  justify-content: center;
+  z-index: 999;
+  /*animacion boton whatsapp*/
+  animation: latido infinite 5s 3s;
+}
+
+@keyframes latido {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.1);
+  }
+  20% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.whatsapp:hover::after {
+  content: "Hola, ¿Te puedo ayudar?";
+  position: absolute;
+  top: -30px;
+  left: -100px;
+  background-color: #30618c;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0.8;
+  width: 200px;
+  text-align: center;
+}
+
+/*productos*/
+.productos {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.productos h2 {
+  grid-column: span 2;
+  margin-top: 1rem;
+  margin-left: 20vw;
+  font-size: 40px;
+  color: #30618c;
+  font-weight: bolder;
+}
+
+.galeria_productos {
+  width: 80vw;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.fotos_productos {
+  margin: 20px 20px;
+  box-shadow: 0 0 5px #acabab;
+  justify-self: center;
+}
+.fotos_productos img {
+  width: 200px;
+  height: 200px;
+  margin: 0.5rem;
+}
+
+.pie_foto_productos {
+  margin-bottom: 0.5rem;
+}
+.pie_foto_productos p {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 0.3rem;
+  color: #777777;
+  font-weight: bold;
+}
+
+.pie_foto_productos .nombre_producto {
+  font-size: 18px;
+  color: #30618c;
+}
+
+/*index*/
+.lineas_portada {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  height: 1rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.texto_portada h1 {
+  color: #30618c;
+}
+
+.galeria_categorias {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 80vw;
+  margin: 2rem auto;
+  margin-top: 3rem;
+}
+.galeria_categorias a {
+  text-decoration: none;
+}
+
+.galeria_index {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 80% 20%;
+  padding-top: 1rem;
+  box-shadow: 0 0 5px #acabab;
+  margin: 0 1rem;
+}
+.galeria_index img {
+  width: 200px;
+  height: 200px;
+}
+
+.botones_index {
+  border: 0;
+  border-radius: 8px;
+  color: #30618c;
+  display: flex;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 20px;
+}
+.botones_index span {
+  background-color: #ffffff;
+  padding: 5px 40px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+/*seccion quienes somos*/
+.quienes_somos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f28f6b;
+  width: 80vw;
+  height: 250px;
+  gap: 10px;
+  margin: 4rem auto;
+}
+
+.img_quienes_somos {
+  height: 250px;
+}
+
+.cuadro_texto_quienes_somos {
+  width: 400px;
+  border-radius: 2rem;
+  padding: 20px;
+  text-align: justify;
+}
+.cuadro_texto_quienes_somos h2 {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.conocer_mas {
+  display: flex;
+  margin-top: 5px;
+  justify-content: right;
+  background-color: #30618c;
+  color: #ffffff;
+  border-radius: 1rem;
+  padding: 10px;
+  margin-left: 240px;
+  text-decoration: none;
+}
+
+.conocer_mas:hover {
+  background-color: #ffffff;
+  color: #30618c;
+}
+
+/*accesorios*/
+.img_accesorios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 30vh;
+  background-image: url(../img/Portada\ accesorios.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #323232;
+  background-blend-mode: soft-light;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #000000;
+}
+
+/*contacto*/
+.img_contacto {
+  margin-top: 1rem;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #000000;
+}
+.img_contacto h1 {
+  color: #59a8d9;
+}
+
+.caja_completa_contacto {
+  background-image: url(../img/foto_contacto.jpg);
+  width: 50vw;
+  height: 100vh;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+
+.bigicon {
+  font-size: 35px;
+  color: #36A0FF;
+}
+
+/*higiene*/
+.img_higiene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 30vh;
+  background-image: url(../img/Portada\ higiene.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #323232;
+  background-blend-mode: soft-light;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #000000;
+}
+
+/*juguetes*/
+.img_juguetes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 30vh;
+  background-image: url(../img/Portada\ juguetes.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #323232;
+  background-blend-mode: soft-light;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #000000;
+}
+
+/*snacks*/
+.img_snacks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 30vh;
+  background-image: url(../img/Portada\ snacks.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #323232;
+  background-blend-mode: soft-light;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #000000;
+}
+
+/*media query tablets*/
+@media screen and (max-width: 1023px) {
+  nav ul li:hover > ul {
+    background-color: #59a8d9;
+    width: 100%;
+  }
+  .navbar {
+    max-height: 100px;
+    left: 0;
+  }
+  .navbar-toggler {
+    background-color: #30618c;
+  }
+  .rrss a img {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  .logo {
+    width: auto;
+  }
+  .lineas {
+    width: 100vw;
+  }
+  .galeria_categorias {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .cuadro_texto_quienes_somos {
+    width: 50vw;
+    height: 100%;
+  }
+  .quienes_somos {
+    width: 100%;
+  }
+  .img_quienes_somos {
+    width: 35vw;
+    height: 100%;
+  }
+  .conocer_mas {
+    width: 25vw;
+    margin: 0.5rem;
+    margin-left: 17vw;
+    padding: 0.3rem 0.2rem;
+    justify-content: center;
+  }
+  .img_accesorios {
+    width: 100vw;
+    height: 15vh;
+  }
+  .img_juguetes {
+    width: 100vw;
+    height: 15vh;
+  }
+  .img_snacks {
+    width: 100vw;
+    height: 15vh;
+  }
+  .img_higiene {
+    width: 100vw;
+    height: 15vh;
+  }
+  .caja_completa_contacto {
+    width: 100vw;
+    height: 100vh;
+    margin: 1rem 0;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .galeria_productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .productos h2 {
+    font-size: 30px;
+  }
+}
+/*media query celulares*/
+@media screen and (max-width: 767px) {
+  .rrss {
+    grid-column: span 1;
+    margin: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  .lineas {
+    width: 100vw;
+  }
+  .img_accesorios h1 {
+    font-size: 35px;
+  }
+  .productos h2 {
+    font-size: 30px;
+  }
+  .galeria_categorias {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  .galeria_productos {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0rem;
+  }
+  .cuadro_texto_quienes_somos {
+    width: 100vw;
+  }
+  .quienes_somos {
+    display: grid;
+    width: 100%;
+    height: 15rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .img_quienes_somos {
+    display: none;
+  }
+  .conocer_mas {
+    width: 30vw;
+    margin: 0.5rem;
+    margin-left: 50vw;
+    padding: 0.3rem 0.2rem;
+    justify-content: center;
+  }
+  .texto_footer {
+    font-size: 13px;
+    margin: 0;
+    margin-left: 1rem;
+  }
+  .whatsapp {
+    display: flex;
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 20vh;
+    right: 4vw;
+    z-index: 999;
+  }
+  .caja_completa_contacto {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  .img_contacto {
+    justify-self: center;
+  }
+  .cuadro_contacto {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .navbar-collapse {
+    transform: translateX(-50%);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

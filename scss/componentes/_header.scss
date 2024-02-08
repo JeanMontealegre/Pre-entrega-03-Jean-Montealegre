@@ -1,0 +1,57 @@
+@import "../utilidades/listas";
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+
+/*header*/
+header{
+    background-color: nth($paleta_colores , 1);
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+}
+.caja_logo{
+    @include flex;
+}
+.logo{
+    width: auto;
+    height: 100px;
+}
+nav{
+    @include flex;
+    li{
+        ul{
+            li{
+                margin: 0.5rem;
+                padding: 0.5rem;
+                gap: $gap_1;
+            }
+        }
+    }
+}
+nav ul{
+    display: flex;
+    font-size: 14px;
+    list-style: none;
+    gap: 3em;
+}
+nav ul li:hover> ul{
+    background-color: nth($paleta_colores , 1);
+}
+.navbar-collapse{
+    background-color: nth($paleta_colores , 1);
+    padding: $gap_1;
+}
+.correo_header{
+    @include flex;
+    margin-top: $gap_1;
+    color: nth($paleta_colores , 6);
+    letter-spacing: 0.15rem ;
+}
+.rrss{
+    @include flex;
+    gap: $gap_1;
+    a 
+        img{
+            @include dimensiones(25px, 25px);
+        }
+}

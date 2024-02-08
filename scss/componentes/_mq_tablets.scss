@@ -1,0 +1,72 @@
+@import "../utilidades/listas";
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+
+/*media query tablets*/
+@media screen and (max-width:1023px){
+    nav ul li:hover> ul{
+        background-color: nth($paleta_colores , 2);
+        width: 100%;
+    }
+    .navbar{
+        max-height: 100px;
+        left: 0;
+    }
+    .navbar-toggler{
+        background-color: nth($paleta_colores , 1);
+    }
+    .rrss a img{
+        @include dimensiones(1.3rem, 1.3rem);
+    }
+    .logo{
+        width: auto;
+    }
+    .lineas{
+        width: 100vw;
+    }
+    .galeria_categorias{
+        grid-template-columns: repeat(2, 1fr);
+        gap: $gap_2;
+    }
+    .cuadro_texto_quienes_somos{
+        @include dimensiones(50vw, 100%);
+    }
+    .quienes_somos{
+        width: 100%;
+    }
+    .img_quienes_somos{
+        @include dimensiones(35vw, 100%);
+    }
+    .conocer_mas{
+        width: 25vw;
+        margin: 0.5rem ;
+        margin-left: 17vw;
+        padding: 0.3rem 0.2rem;
+        justify-content: center;
+    }
+    .img_accesorios{
+        @include dimensiones(100vw, 15vh);
+    }
+    .img_juguetes{
+        @include dimensiones(100vw, 15vh);
+    }
+    .img_snacks{
+        @include dimensiones(100vw, 15vh);
+    }
+    .img_higiene{
+        @include dimensiones(100vw, 15vh);
+    }
+    .caja_completa_contacto{
+        @include dimensiones(100vw, 100vh);
+        margin: $gap_1 0;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .galeria_productos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .productos h2{
+        font-size: 30px;
+    }
+}

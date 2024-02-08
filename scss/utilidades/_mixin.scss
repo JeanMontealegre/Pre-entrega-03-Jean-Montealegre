@@ -1,0 +1,12 @@
+//con parametros
+@mixin dimensiones($width, $height){
+    width: $width;
+    height: $height;
+}
+
+//sin parametros
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
