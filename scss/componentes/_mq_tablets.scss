@@ -37,6 +37,9 @@
     .img_quienes_somos{
         @include dimensiones(35vw, 100%);
     }
+    .nuestros_valores{
+        width: 100%;
+    }
     .conocer_mas{
         width: 25vw;
         margin: 0.5rem ;

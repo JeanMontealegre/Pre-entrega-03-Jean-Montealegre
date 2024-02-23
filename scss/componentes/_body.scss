@@ -17,7 +17,7 @@ h1{
     margin: 10px;
 }
 h2{
-    width: 80vw;
+    width: 70vw;
 }
 .lineas{
     display: grid;
@@ -133,6 +133,10 @@ h2{
         @include dimensiones (200px, 200px);
         margin: 0.5rem;
     }
+}
+.fotos_productos:hover{
+    transform: scale(1.2);
+    filter: saturate(2);
 }
 .pie_foto_productos{
     margin-bottom: 0.5rem;

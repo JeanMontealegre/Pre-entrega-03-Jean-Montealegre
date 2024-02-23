@@ -16,6 +16,10 @@ header{
     width: auto;
     height: 100px;
 }
+.logo:hover{
+    transform: scale(1.5);
+    filter: saturate(2);
+}
 nav{
     @include flex;
     li{
@@ -33,6 +37,9 @@ nav ul{
     font-size: 14px;
     list-style: none;
     gap: 3em;
+}
+.nav-item:hover{
+    background-color: nth($paleta_colores, 2);
 }
 nav ul li:hover> ul{
     background-color: nth($paleta_colores , 1);
@@ -54,4 +61,16 @@ nav ul li:hover> ul{
         img{
             @include dimensiones(25px, 25px);
         }
+}
+.instagram:hover{
+    transform: scale(2);
+    filter: saturate(2);
+}
+.tiktok:hover{
+    transform: scale(2);
+    filter: saturate(2);
+}
+.logo_whatspp:hover{
+    transform: scale(2);
+    filter: saturate(2);
 }
